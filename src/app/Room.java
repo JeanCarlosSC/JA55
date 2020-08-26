@@ -8,10 +8,12 @@ import javax.swing.JPanel;
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public abstract class Room extends JPanel{
-    ArrayList<Objeto> components;
+    private ArrayList<Objeto> components;
+    private String title;
     
-    public Room (int x, int y, int width, int height){
+    public Room (int x, int y, int width, int height, String title){
         components = new ArrayList<Objeto>();
+        this.title = title;
         
         setLocation(x*-1, y*-1);
         setSize(width, height);
@@ -29,4 +31,9 @@ public abstract class Room extends JPanel{
             }
         }
     }
+    
+    public String getTitle(){
+        return title;
+    }
+    
 }

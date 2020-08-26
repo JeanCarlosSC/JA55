@@ -1,6 +1,7 @@
 package app;
 
 import app.rooms.MainRoom;
+import app.rooms.PsychedelicForest;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -11,7 +12,8 @@ import javax.swing.JFrame;
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public class Window extends JFrame implements KeyListener{
-    Room main;
+    Room main, psychedelicForest;
+    String roomActual;
     
     public Window(){
         addKeyListener(this);
@@ -27,9 +29,7 @@ public class Window extends JFrame implements KeyListener{
 
     public void drawMain(){
         main = new MainRoom();
-        getContentPane().removeAll();
-        add(main);
-        repaint();
+        setRoom(main);
     }
     
     @Override
@@ -41,10 +41,29 @@ public class Window extends JFrame implements KeyListener{
         if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
             System.exit(0);
         }
+        if(e.getKeyCode() == KeyEvent.VK_ENTER && getRoom().equals("main")){
+            if(psychedelicForest == null)
+                psychedelicForest = new PsychedelicForest(0, 0);
+            setRoom(psychedelicForest);
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+    }
+
+    private void setRoom(Room room) {
+        roomActual = room.getTitle();
+        getContentPane().removeAll();
+        add(room);
+        repaint();
+    }
+    
+    private String getRoom(){
+        if(roomActual != null)
+            return roomActual;
+        else
+            return "null";
     }
     
 }

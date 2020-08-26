@@ -12,7 +12,7 @@ import java.awt.Color;
 public class MainRoom extends Room{
     
     public MainRoom(){
-        super(0, 0, 1280, 720);
+        super(0, 0, 1280, 720, "main");
         
         Objeto pressStart = new PressEnter(410, 620);
         
