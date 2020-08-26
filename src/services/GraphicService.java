@@ -48,11 +48,16 @@ public final class GraphicService {
         return panel;
     }
     
-    public JLabel getLabel(Icon icono, int x, int y){
-        JLabel label = new JLabel();
+    public JLabel setLabel(JLabel label, Icon icono, int x, int y){
         label.setSize(icono.getIconWidth(), icono.getIconHeight());
         label.setLocation(x, y);
         label.setIcon(icono);
+        return label;
+    }
+    
+    public JLabel getLabel(Icon icono, int x, int y){
+        JLabel label = new JLabel();
+        setLabel(label, icono, x, y);
         return label;
     }
     

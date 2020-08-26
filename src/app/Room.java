@@ -1,5 +1,6 @@
 package app;
 
+import app.tiles.Lawn;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -22,6 +23,18 @@ public abstract class Room extends JPanel{
     public void addComponent(Objeto objeto, int height){
         components.add(objeto);
         add(components.get(components.size() - 1), height);
+    }
+    
+    public void addTiles(int x, int y, int filas, int columnas, String tileName){
+        for(int i=0; i<filas; i++){
+            for(int j=0; j<columnas; j++){
+                switch(tileName){
+                    case "lawn":
+                        add(new Lawn(x+j*64,y+i*64));
+                        break;
+                }
+            }
+        }
     }
     
     public void update(){

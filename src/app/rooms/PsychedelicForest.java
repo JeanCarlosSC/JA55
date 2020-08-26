@@ -1,6 +1,7 @@
 package app.rooms;
 
 import app.Room;
+import java.awt.Color;
 
 /**
  *
@@ -9,9 +10,10 @@ import app.Room;
 public class PsychedelicForest extends Room{
     
     public PsychedelicForest(int x, int y) {
-        super(x, y, 50, 50, "psychedelicForest");
+        super(x, y, 1280, 720, "psychedelicForest");
+        
+        addTiles(0, 0, 12, 20, "lawn");
+        setBackground(Color.BLACK);
     }
-    
-    
     
 }
