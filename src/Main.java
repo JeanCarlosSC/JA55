@@ -20,12 +20,17 @@ public class Main {
         windowMachine = new Window();
         soundMachine = new Sound();
         
+        windowMachine.drawMain();
         soundMachine.playMain();
         
         run();
     }
     
-    private void run(){
+    public void nextRoom(){
+        
     }
     
+    private void run(){
+        
+    }
 }
