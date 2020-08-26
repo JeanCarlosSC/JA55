@@ -16,7 +16,7 @@ public class MainRoom extends Room{
         
         Objeto pressStart = new PressEnter(410, 620);
         
-        addComponent(pressStart);
+        addComponent(pressStart, -1);
         
         setBackground(Color.BLACK);
     }

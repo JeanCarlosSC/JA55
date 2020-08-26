@@ -17,9 +17,9 @@ public abstract class Room extends JPanel{
         setSize(width, height);
     }
     
-    public void addComponent(Objeto objeto){
+    public void addComponent(Objeto objeto, int height){
         components.add(objeto);
-        add(components.get(components.size() - 1));
+        add(components.get(components.size() - 1), height);
     }
     
     public void update(){

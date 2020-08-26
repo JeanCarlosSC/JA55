@@ -15,7 +15,7 @@ public class Window extends JFrame implements KeyListener{
     
     public Window(){
         addKeyListener(this);
-        getContentPane().setBackground(Color.green);
+        getContentPane().setBackground(Color.BLACK);
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setUndecorated(true);
