@@ -1,4 +1,5 @@
 
+import app.Sound;
 import app.Window;
 
 
@@ -8,9 +9,23 @@ import app.Window;
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public class Main {
+    Window windowMachine;
+    Sound soundMachine;
     
     public static void main (String args[]){
-        Window window = new Window();
+        Main main = new Main();
+    }
+    
+    public Main(){
+        windowMachine = new Window();
+        soundMachine = new Sound();
+        
+        soundMachine.playMain();
+        
+        run();
+    }
+    
+    private void run(){
     }
     
 }
