@@ -1,6 +1,6 @@
 package app.components;
 
-import app.Objeto;
+import app.master.Objeto;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import services.GraphicService;

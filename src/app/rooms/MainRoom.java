@@ -1,7 +1,7 @@
 package app.rooms;
 
-import app.Objeto;
-import app.Room;
+import app.master.Objeto;
+import app.master.Room;
 import app.components.PressEnter;
 import java.awt.Color;
 

@@ -1,5 +1,7 @@
-package app;
+package app.master;
 
+import app.characters.Player;
+import app.master.Objeto;
 import app.tiles.Floor;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -17,12 +19,17 @@ public abstract class Room extends JPanel{
         this.title = title;
         
         setLocation(x*-1, y*-1);
+        setLayout(null);
         setSize(width, height);
     }
     
     public void addComponent(Objeto objeto, int height){
         components.add(objeto);
         add(components.get(components.size() - 1), height);
+    }
+    
+    public void addPlayer(Player player){
+        add(player, -1);
     }
     
     public void addTiles(int x, int y, int filas, int columnas, String tileName){

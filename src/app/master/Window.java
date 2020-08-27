@@ -1,5 +1,8 @@
-package app;
+package app.master;
 
+import app.Main;
+import app.characters.Player;
+import app.master.Room;
 import app.rooms.MainRoom;
 import app.rooms.PsychedelicForest;
 import java.awt.Color;
@@ -11,12 +14,12 @@ import javax.swing.JFrame;
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class Window extends JFrame implements KeyListener{
-    Room main, psychedelicForest;
-    String roomActual;
+public class Window extends JFrame{
+    private Room now, main, psychedelicForest;
+    private String roomActual;
     
-    public Window(){
-        addKeyListener(this);
+    public Window(Main main){
+        addKeyListener(main);
         getContentPane().setBackground(Color.BLACK);
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -32,38 +35,31 @@ public class Window extends JFrame implements KeyListener{
         setRoom(main);
     }
     
-    @Override
-    public void keyTyped(KeyEvent e) {
+    public void addPlayer(Player player){
+        now.addPlayer(player);
     }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
-            System.exit(0);
-        }
-        if(e.getKeyCode() == KeyEvent.VK_ENTER && getRoom().equals("main")){
-            if(psychedelicForest == null)
-                psychedelicForest = new PsychedelicForest(0, 0);
-            setRoom(psychedelicForest);
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-    }
-
+    
     private void setRoom(Room room) {
+        now = room;
         roomActual = room.getTitle();
         getContentPane().removeAll();
         add(room);
         repaint();
     }
     
-    private String getRoom(){
+    public void setRoom(String name) {
+        if(name.equals("psychedelicForest")){
+            if(psychedelicForest == null)
+                psychedelicForest = new PsychedelicForest(0, 0);
+            setRoom(psychedelicForest);
+        }
+    }
+    
+    public String getRoom(){
         if(roomActual != null)
             return roomActual;
         else
             return "null";
     }
-    
+
 }

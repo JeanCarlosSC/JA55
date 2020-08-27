@@ -1,6 +1,6 @@
 package app.tiles;
 
-import app.Tile;
+import app.master.Tile;
 
 /**
  *

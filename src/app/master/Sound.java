@@ -1,4 +1,4 @@
-package app;
+package app.master;
 
 import static java.applet.Applet.newAudioClip;
 import java.applet.AudioClip;

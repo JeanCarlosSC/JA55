@@ -1,6 +1,6 @@
 package app.rooms;
 
-import app.Room;
+import app.master.Room;
 import java.awt.Color;
 
 /**

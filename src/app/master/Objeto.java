@@ -1,4 +1,4 @@
-package app;
+package app.master;
 
 import javax.swing.JPanel;
 
