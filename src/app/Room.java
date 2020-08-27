@@ -1,6 +1,6 @@
 package app;
 
-import app.tiles.Lawn;
+import app.tiles.Floor;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 
@@ -30,7 +30,10 @@ public abstract class Room extends JPanel{
             for(int j=0; j<columnas; j++){
                 switch(tileName){
                     case "lawn":
-                        add(new Lawn(x+j*64,y+i*64));
+                        add(new Floor(x+j*64,y+i*64));
+                        break;
+                    case "floor":
+                        add(new Floor(x+j*32,y+i*32));
                         break;
                 }
             }

@@ -12,7 +12,7 @@ public class PsychedelicForest extends Room{
     public PsychedelicForest(int x, int y) {
         super(x, y, 1280, 720, "psychedelicForest");
         
-        addTiles(0, 0, 12, 20, "lawn");
+        addTiles(0, 0, 12, 20, "floor");
         setBackground(Color.BLACK);
     }
     
