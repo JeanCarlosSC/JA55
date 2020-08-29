@@ -1,7 +1,6 @@
 package app;
 
 
-import app.characters.Player;
 import app.master.Sound;
 import app.master.Window;
 import services.systemService.SystemKeyboard;
@@ -25,12 +24,14 @@ public class Main{
         keyboard = SystemKeyboard.getService();
         
         window = new Window(this);
-        sound = new Sound();
-        
+        window.addKeyListener(keyboard);
         window.setRoom("main");
+        
+        sound = new Sound();
         sound.play("main");
         
-        run();
+        while(true)
+            run();
     }
     
     private void run(){

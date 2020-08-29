@@ -1,12 +1,13 @@
 package app.tiles;
 
-import app.master.Tile;
+import services.gameService.GameTile;
+
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class Floor extends Tile{
+public class Floor extends GameTile{
     
     
     public Floor(int x, int y) {

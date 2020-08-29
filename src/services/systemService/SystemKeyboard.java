@@ -1,20 +1,20 @@
 package services.systemService;
 
 import static com.sun.java.accessibility.util.AWTEventMonitor.addKeyListener;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class SystemKeyboard extends KeyAdapter{
+public class SystemKeyboard implements KeyListener{
     private boolean escape, enter;
     
     private static SystemKeyboard service;
     
     private SystemKeyboard(){
-        addKeyListener(this);
+        //remember to add the listener to some object
     }
     
     public boolean get(String button){
@@ -29,6 +29,10 @@ public class SystemKeyboard extends KeyAdapter{
         if(service == null)
             service = new SystemKeyboard();
         return service;
+    }
+    
+    @Override
+    public void keyTyped(KeyEvent e) {
     }
 
     @Override
@@ -50,4 +54,5 @@ public class SystemKeyboard extends KeyAdapter{
             enter = false;
         }
     }
+
 }
