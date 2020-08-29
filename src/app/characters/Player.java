@@ -1,15 +1,19 @@
 package app.characters;
 
-import app.master.Character;
+import services.gameService.GameObject;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class Player extends Character{
+public class Player extends GameObject{
     
     public Player(int x, int y){
-        super(x, y, 32, 64, "/resources/character/skeleton.png", 22, 22);
+        super(x, y);
+    }
+
+    @Override
+    public void update() {
     }
     
 }

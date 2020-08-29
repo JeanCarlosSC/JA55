@@ -15,6 +15,8 @@ public class PressEnter extends GameObject{
     private JLabel lPressEnter;
     
     public PressEnter(int x, int y){
+        super(x, y);
+        
         gs = GraphicBuilder.getService();
         
         ImageIcon iPressStart = new ImageIcon(getClass().getResource("/resources/images/pressEnter.png"));
@@ -22,9 +24,6 @@ public class PressEnter extends GameObject{
         lPressEnter = gs.getLabel(iPressStart, 0, 0);
         add(lPressEnter);
         
-        setBackground(null);
-        setLayout(null);
-        setLocation(x, y);
         setSize(800, 400);
     }
 

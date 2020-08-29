@@ -1,6 +1,5 @@
 package app;
 
-
 import app.master.Sound;
 import app.master.Window;
 import services.systemService.SystemKeyboard;
