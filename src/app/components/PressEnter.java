@@ -1,15 +1,15 @@
 package app.components;
 
-import app.master.Objeto;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import services.graphicService.GraphicBuilder;
+import services.gameService.GameObject;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class PressEnter extends Objeto{
+public class PressEnter extends GameObject{
     private GraphicBuilder gs;
     
     private JLabel lPressEnter;

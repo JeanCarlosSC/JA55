@@ -1,20 +1,20 @@
 package app.rooms;
 
-import app.master.Objeto;
-import app.master.Room;
 import app.components.PressEnter;
 import java.awt.Color;
+import services.gameService.GameObject;
+import services.gameService.GameRoom;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class MainRoom extends Room{
+public class MainRoom extends GameRoom{
     
     public MainRoom(){
         super(0, 0, 1280, 720, "main");
         
-        Objeto pressStart = new PressEnter(410, 620);
+        GameObject pressStart = new PressEnter(410, 620);
         
         addComponent(pressStart, -1);
         

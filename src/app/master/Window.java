@@ -1,7 +1,6 @@
 package app.master;
 
 import app.Main;
-import app.characters.Player;
 import app.rooms.MainRoom;
 import app.rooms.PsychedelicForest;
 import java.awt.Color;
@@ -16,7 +15,7 @@ public class Window extends JFrame{
     
     private Main main;//ref
     
-    private GameRoom currentRoom, main, psychedelicForest;
+    private GameRoom currentRoom, mainRoom, psychedelicForest;
     
     public Window(Main main){
         this.main = main;
@@ -31,28 +30,25 @@ public class Window extends JFrame{
         setVisible(true);
     }
 
-    public void drawMain(){
-        main = new MainRoom();
-        setRoom(main);
-    }
-    
-    public void addPlayer(Player player){
-        now.addPlayer(player);
-    }
-    
-    private void setRoom(Room room) {
-        now = room;
-        roomActual = room.getTitle();
+    private void setRoom(GameRoom room) {
+        currentRoom = room;
         getContentPane().removeAll();
         add(room);
         repaint();
     }
     
     public void setRoom(String name) {
-        if(name.equals("psychedelicForest")){
-            if(psychedelicForest == null)
-                psychedelicForest = new PsychedelicForest(0, 0);
-            setRoom(psychedelicForest);
+        switch(name){
+            case "main":
+                if(mainRoom == null)
+                    mainRoom = new MainRoom();
+                setRoom(mainRoom);
+                break;
+            case "psychedelicForest":
+                if(psychedelicForest == null)
+                    psychedelicForest = new PsychedelicForest(0, 0);
+                setRoom(psychedelicForest);
+                break;
         }
     }
     
