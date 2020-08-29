@@ -16,7 +16,7 @@ public class MainRoom extends GameRoom{
         
         GameObject pressStart = new PressEnter(410, 620);
         
-        addComponent(pressStart, -1);
+        addGameObject(pressStart, -1);
         
         setBackground(Color.BLACK);
     }

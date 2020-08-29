@@ -22,7 +22,7 @@ public abstract class GameRoom extends JPanel{
         setSize(width, height);
     }
     
-    public void addComponent(GameObject object, int height){
+    public void addGameObject(GameObject object, int height){
         objects.add(object);
         add(objects.get(objects.size() - 1), height);
     }
