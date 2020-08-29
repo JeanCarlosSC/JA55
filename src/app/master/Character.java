@@ -3,7 +3,7 @@ package app.master;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import services.GraphicService;
+import services.graphicService.GraphicBuilder;
 
 /**
  *
@@ -11,10 +11,10 @@ import services.GraphicService;
  */
 public abstract class Character extends JPanel{
     private JLabel lSprite;
-    private GraphicService gs;
+    private GraphicBuilder gs;
     
     public Character(int x, int y, int width, int height, String path, int xSprite, int ySprite){
-        gs = GraphicService.getService();
+        gs = GraphicBuilder.getService();
         
         ImageIcon icono = new ImageIcon(getClass().getResource(path));
         

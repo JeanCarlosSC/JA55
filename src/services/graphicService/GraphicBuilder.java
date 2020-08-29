@@ -1,4 +1,4 @@
-package services;
+package services.graphicService;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -17,11 +17,11 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 
-public final class GraphicService {
+public final class GraphicBuilder {
     
-    private static GraphicService service;
+    private static GraphicBuilder service;
 
-    private GraphicService(){
+    private GraphicBuilder(){
     }
     
     public Icon getIcon(String ruta, int width, int height){
@@ -163,9 +163,9 @@ public final class GraphicService {
         return textField;
     }
     
-    public static GraphicService getService(){
+    public static GraphicBuilder getService(){
         if(service == null)
-            service = new GraphicService();
+            service = new GraphicBuilder();
         return service;
     }
 

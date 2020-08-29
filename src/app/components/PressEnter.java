@@ -3,19 +3,19 @@ package app.components;
 import app.master.Objeto;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import services.GraphicService;
+import services.graphicService.GraphicBuilder;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public class PressEnter extends Objeto{
-    private GraphicService gs;
+    private GraphicBuilder gs;
     
     private JLabel lPressEnter;
     
     public PressEnter(int x, int y){
-        gs = GraphicService.getService();
+        gs = GraphicBuilder.getService();
         
         ImageIcon iPressStart = new ImageIcon(getClass().getResource("/resources/images/pressEnter.png"));
         

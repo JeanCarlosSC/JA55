@@ -19,7 +19,7 @@ public class Window extends JFrame{
     private String roomActual;
     
     public Window(Main main){
-        addKeyListener(main);
+        //addKeyListener(main);
         getContentPane().setBackground(Color.BLACK);
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
