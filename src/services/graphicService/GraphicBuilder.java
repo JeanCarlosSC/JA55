@@ -24,8 +24,8 @@ public final class GraphicBuilder {
     private GraphicBuilder(){
     }
     
-    public Icon getIcon(String ruta, int width, int height){
-        ImageIcon iIcono = new ImageIcon(Icon.class.getResource(ruta));
+    public Icon getIcon(String path, int width, int height){
+        ImageIcon iIcono = new ImageIcon(Icon.class.getResource(path));
         Icon icono = new ImageIcon(iIcono.getImage().getScaledInstance(width, height,Image.SCALE_DEFAULT));
         return icono;
     }

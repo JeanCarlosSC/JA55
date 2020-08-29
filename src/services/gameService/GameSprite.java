@@ -4,6 +4,6 @@ package services.gameService;
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class GameSprite {
+public abstract class GameSprite {
     
 }

@@ -4,14 +4,16 @@ package app;
 import app.characters.Player;
 import app.master.Sound;
 import app.master.Window;
-
-
+import services.systemService.SystemKeyboard;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public class Main{
+    
+    private SystemKeyboard keyboard;//ref
+    
     private Window window;
     private Sound sound;
     
@@ -20,27 +22,23 @@ public class Main{
     }
     
     public Main(){
+        keyboard = SystemKeyboard.getService();
+        
         window = new Window(this);
         sound = new Sound();
         
-        window.drawMain();
-        sound.playMain();
+        window.setRoom("main");
+        sound.play("main");
         
         run();
     }
     
-    public void nextRoom(){
-        
-    }
-    
-    private void run(){/*
-        if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
+    private void run(){
+        if(keyboard.get("escape")){
             System.exit(0);
         }
-        if(e.getKeyCode() == KeyEvent.VK_ENTER && windowMachine.getRoom().equals("main")){
-            windowMachine.setRoom("psychedelicForest");
-            player = new Player(32, 32);
-            windowMachine.addPlayer(player);
-        }*/
+        if(keyboard.get("enter") && window.getTitleCurrentRoom().equals("main")){
+            window.setRoom("psychedelicForest");
+        }
     }
 }

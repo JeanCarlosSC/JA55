@@ -2,24 +2,25 @@ package app.master;
 
 import app.Main;
 import app.characters.Player;
-import app.master.Room;
 import app.rooms.MainRoom;
 import app.rooms.PsychedelicForest;
 import java.awt.Color;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import javax.swing.JFrame;
+import services.gameService.GameRoom;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
 public class Window extends JFrame{
-    private Room now, main, psychedelicForest;
-    private String roomActual;
+    
+    private Main main;//ref
+    
+    private GameRoom currentRoom, main, psychedelicForest;
     
     public Window(Main main){
-        //addKeyListener(main);
+        this.main = main;
+        
         getContentPane().setBackground(Color.BLACK);
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -55,11 +56,10 @@ public class Window extends JFrame{
         }
     }
     
-    public String getRoom(){
-        if(roomActual != null)
-            return roomActual;
-        else
-            return "null";
+    public String getTitleCurrentRoom(){
+        if(currentRoom != null)
+            return currentRoom.getTitle();
+        return "null";
     }
 
 }
