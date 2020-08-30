@@ -57,5 +57,9 @@ public class Window extends JFrame{
             return currentRoom.getTitle();
         return "null";
     }
+    
+    public void run(){
+        currentRoom.run();
+    }
 
 }

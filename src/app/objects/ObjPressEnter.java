@@ -18,8 +18,4 @@ public class ObjPressEnter extends GameObject{
         super(x, y, 398, 52, new SpPressEnter());
     }
 
-    @Override
-    public void update() {
-    }
-    
 }

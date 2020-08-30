@@ -13,9 +13,4 @@ public class ObjBackground extends GameObject{
         super(0, 0, 1280, 720, new SpBackground());
     }
 
-    @Override
-    public void update() {
-        nextIndex();
-    }
-    
 }

@@ -26,6 +26,8 @@ public abstract class GameObject extends JPanel{
         sprite.nextIndex();
     }
     
-    public abstract void update();
+    public void run(){
+        nextIndex();
+    }
     
 }

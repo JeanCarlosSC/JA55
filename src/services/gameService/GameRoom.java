@@ -41,12 +41,13 @@ public abstract class GameRoom extends JPanel{
         }
     }
     
-    public void update(){
+    public void run(){
         if(objects.size() > 0){
             for(int i=0; i<objects.size(); i++){
-                objects.get(i).update();
+                objects.get(i).run();
             }
         }
+        repaint();
     }
     
     public String getTitle(){

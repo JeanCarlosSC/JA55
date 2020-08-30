@@ -29,8 +29,22 @@ public class Main{
         sound = new Sound();
         sound.play("main");
         
-        while(true)
-            run();
+        while(true){
+            long lastTime = System.nanoTime();
+            final double nsCode = 1000000000.0 / 60.0;
+            double delta = 0;
+
+            while(true){
+                long now = System.nanoTime();
+                delta += (now - lastTime) / nsCode;
+                lastTime = now;
+
+                while(delta >= 1.0){
+                    run();
+                    delta--;
+                }
+            } 
+        }
     }
     
     private void run(){
@@ -40,5 +54,6 @@ public class Main{
         if(keyboard.get("enter") && window.getTitleCurrentRoom().equals("main")){
             window.setRoom("psychedelicForest");
         }
+        window.run();
     }
 }

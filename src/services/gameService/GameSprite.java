@@ -40,7 +40,7 @@ public abstract class GameSprite extends JLabel{
     }
     
     public void nextIndex(){
-        if(currentIndex < index.size() / 2)
+        if(currentIndex < index.size() / 2 && index.size() / 2 > 1)
             setIndex(currentIndex + 1);
         else
             setIndex(0);

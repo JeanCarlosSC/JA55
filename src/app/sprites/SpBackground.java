@@ -14,10 +14,10 @@ public class SpBackground extends GameSprite{
     
     @Override
     public void nextIndex(){
-        if(getLocation().x < -500)
+        if(getLocation().x < -703)
             setLocation(0, getLocation().y);
         else
-            setLocation(getLocation().x+1, getLocation().y);
+            setLocation(getLocation().x-16, getLocation().y);
     }
     
 }
