@@ -1,19 +1,21 @@
 package app.objects;
 
+import app.sprites.SpBackground;
 import services.gameService.GameObject;
 
 /**
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class ObjPlayer extends GameObject{
+public class ObjBackground extends GameObject{
     
-    public ObjPlayer(int x, int y){
-        super(x, y, null);
+    public ObjBackground(){
+        super(0, 0, new SpBackground());
     }
 
     @Override
     public void update() {
+        nextIndex();
     }
     
 }

@@ -1,4 +1,4 @@
-package app.components;
+package app.objects;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -9,13 +9,13 @@ import services.gameService.GameObject;
  *
  * @author Jean Carlos Santoya Cabrera jeancarlosodi@gmail.com
  */
-public class PressEnter extends GameObject{
+public class ObjPressEnter extends GameObject{
     private GraphicBuilder gs;
     
     private JLabel lPressEnter;
     
-    public PressEnter(int x, int y){
-        super(x, y);
+    public ObjPressEnter(int x, int y){
+        super(x, y, null);
         
         gs = GraphicBuilder.getService();
         
