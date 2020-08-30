@@ -18,12 +18,10 @@ public class MainRoom extends GameRoom{
         super(0, 0, 1280, 720, "main");
         
         pressStart = new ObjPressEnter(410, 620);
-        background = new ObjBackground(); 
+        background = new ObjBackground();
         
-        addGameObject(background, -1);
-        addGameObject(pressStart, -1);
-        
-        setBackground(Color.BLACK);
+        addGameObject(pressStart);
+        addGameObject(background);
     }
     
 }

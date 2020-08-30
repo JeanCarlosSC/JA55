@@ -9,7 +9,7 @@ import services.gameService.GameObject;
 public class ObjPlayer extends GameObject{
     
     public ObjPlayer(int x, int y){
-        super(x, y, null);
+        super(x, y, 64, 64, null);
     }
 
     @Override

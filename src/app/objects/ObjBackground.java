@@ -10,7 +10,7 @@ import services.gameService.GameObject;
 public class ObjBackground extends GameObject{
     
     public ObjBackground(){
-        super(0, 0, new SpBackground());
+        super(0, 0, 1280, 720, new SpBackground());
     }
 
     @Override

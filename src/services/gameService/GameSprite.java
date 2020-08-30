@@ -15,11 +15,8 @@ public abstract class GameSprite extends JLabel{
     private ArrayList<Integer> index;//the index is positive
     private int currentIndex;
     
-    public GameSprite(int x, int y, int width, int height, String path){
+    private GameSprite(int x, int y, Icon icono){
         index = new ArrayList<Integer>();
-        
-        ImageIcon iIcono = new ImageIcon(Icon.class.getResource(path));
-        Icon icono = new ImageIcon(iIcono.getImage().getScaledInstance(width, height, Image.SCALE_DEFAULT));
         
         addIndex(x, y);
         setIndex(0);
@@ -27,6 +24,14 @@ public abstract class GameSprite extends JLabel{
         setBackground(null);
         setIcon(icono);
         setSize(icono.getIconWidth(), icono.getIconHeight());
+    }
+    
+    public GameSprite(int x, int y, String path){
+        this(x, y, new ImageIcon(Icon.class.getResource(path)));
+    }
+    
+    public GameSprite(int x, int y, int width, int height, String path){
+        this(x, y, new ImageIcon((new ImageIcon(Icon.class.getResource(path))).getImage().getScaledInstance(width, height, Image.SCALE_DEFAULT)));
     }
     
     public GameSprite(int x, int y, int scale, String path){

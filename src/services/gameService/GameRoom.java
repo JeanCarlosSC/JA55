@@ -18,13 +18,18 @@ public abstract class GameRoom extends JPanel{
         this.title = title;
         
         setLocation(x*-1, y*-1);
-        setLayout(null);
         setSize(width, height);
+        setLayout(null);
     }
     
     public void addGameObject(GameObject object, int height){
         objects.add(object);
         add(objects.get(objects.size() - 1), height);
+    }
+    
+    public void addGameObject(GameObject object){
+        objects.add(object);
+        add(objects.get(objects.size() - 1));
     }
     
     public void addTiles(int x, int y, int filas, int columnas, GameTile tile){
