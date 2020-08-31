@@ -27,4 +27,6 @@ public abstract class GameTile extends JLabel{
         return title;
     }
     
+    
+    public abstract GameTile getNewTile(int x, int y);
 }

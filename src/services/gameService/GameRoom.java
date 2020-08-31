@@ -36,9 +36,7 @@ public abstract class GameRoom extends JPanel{
     public void addTiles(int x, int y, int filas, int columnas, GameTile tile){
         for(int i=0; i<filas; i++){
             for(int j=0; j<columnas; j++){
-                //Attempts
-                //add(new Class<tile.getClass()>(x+j*64,y+i*64));
-                //add(tile.getClass().newInstance().setLocation(x+j*64,y+i*64));
+                add(tile.getNewTile(x+j*tile.getWidth(),y+i*tile.getHeight()));
             }
         }
     }
