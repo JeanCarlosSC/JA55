@@ -41,12 +41,15 @@ public abstract class GameRoom extends JPanel{
         }
     }
     
-    public void run(){
+    public void run(){//this method runs 60 times per second
+        setIgnoreRepaint(true);
+        setVisible(false);
         if(objects.size() > 0){
             for(int i=0; i<objects.size(); i++){
-                objects.get(i).run();
+                objects.get(i).run();//moves my JLabels with setLocation
             }
         }
+        setVisible(true);
         repaint();
     }
     
