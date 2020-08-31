@@ -17,6 +17,7 @@ public abstract class GameRoom extends JPanel{
         
         this.title = title;
         
+        setIgnoreRepaint(true);
         setLocation(x*-1, y*-1);
         setSize(width, height);
         setLayout(null);
@@ -42,7 +43,6 @@ public abstract class GameRoom extends JPanel{
     }
     
     public void run(){//this method runs 60 times per second
-        setIgnoreRepaint(true);
         setVisible(false);
         if(objects.size() > 0){
             for(int i=0; i<objects.size(); i++){
