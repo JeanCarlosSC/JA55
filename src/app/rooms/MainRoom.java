@@ -2,7 +2,6 @@ package app.rooms;
 
 import app.objects.ObjBackground;
 import app.objects.ObjPressEnter;
-import java.awt.Color;
 import services.gameService.GameObject;
 import services.gameService.GameRoom;
 
@@ -20,8 +19,8 @@ public class MainRoom extends GameRoom{
         pressStart = new ObjPressEnter(410, 620);
         background = new ObjBackground();
         
-        addGameObject(pressStart);
-        addGameObject(background);
+        addGameObject(pressStart, "top");
+        addGameObject(background, "bottom");
     }
     
 }
