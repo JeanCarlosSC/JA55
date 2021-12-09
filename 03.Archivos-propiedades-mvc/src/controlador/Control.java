@@ -31,17 +31,11 @@ public class Control implements ActionListener {
     private Vista vista;
     private Properties propiedades;
     private ArrayList<User> users;
-    RandomAccessFile archivo;
-    File fl;
+    private RandomAccessFile archivo;
+    private File fl;
 
     public Control(Vista vista) {
         this.vista = vista;
-        
-        try {
-            fl = new File("archivoAccesoAleatorio.dat");
-            archivo = new RandomAccessFile(fl, "rw");
-        } catch (FileNotFoundException fnfe) {/* Archivo no encontrado */
-        }
         
         //cargar propiedades
         propiedades = new Properties();
@@ -59,7 +53,7 @@ public class Control implements ActionListener {
                     usuario.setNombre(propiedades.getProperty("user" + i + ".nombre"));
                     usuario.setIdioma(propiedades.getProperty("user" + i + ".idioma"));
                     usuario.setEdad(Integer.parseInt(propiedades.getProperty("user" + i + ".edad")));
-                    usuario.setSexo(propiedades.getProperty("user" + i + ".mujer"));
+                    usuario.setSexo(propiedades.getProperty("user" + i + ".sexo"));
 
                     users.add(usuario);
                     i++;
@@ -142,6 +136,12 @@ public class Control implements ActionListener {
     }
     
     private void guardarArchivoAccesoAleatorio() {
+        try {
+            fl = new File("archivoAccesoAleatorio.dat");
+            archivo = new RandomAccessFile(fl, "rw");
+        } catch (FileNotFoundException fnfe) {/* Archivo no encontrado */
+        }
+        
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
         try {
             if (users.size() <= 0) {

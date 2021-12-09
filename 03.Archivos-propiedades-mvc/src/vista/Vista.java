@@ -183,17 +183,10 @@ public class Vista extends javax.swing.JFrame {
         return añadir;
     }
 
-    public void setAñadir(JButton añadir) {
-        this.añadir = añadir;
-    }
-
     public JButton getLimpiar() {
         return limpiar;
     }
 
-    public void setLimpiar(JButton limpiar) {
-        this.limpiar = limpiar;
-    }
 
     public JTextField getEdad() {
         return edad;
