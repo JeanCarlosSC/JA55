@@ -15,16 +15,16 @@ import model.Client;
  *
  * @author curlf
  */
-public class ClientGUI extends javax.swing.JFrame {
+public class ClientGUIold extends javax.swing.JFrame {
 
     private Socket cliente;
     private final int PUERTOC = 1000;
     private String host = "localhost";
     private DataOutputStream salida;
     private String nombre;
-    private ServerGUI servidor;
+    private ServerGUIold servidor;
 
-    public ClientGUI(ServerGUI servidor) {
+    public ClientGUIold(ServerGUIold servidor) {
         this.servidor = servidor;
         initComponents();
 

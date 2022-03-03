@@ -1,6 +1,6 @@
 package view;
 
-import view.ClientGUI;
+import view.ClientGUIold;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -12,13 +12,13 @@ import model.Server;
  *
  * @author curlf
  */
-public class ServerGUI extends javax.swing.JFrame {
+public class ServerGUIold extends javax.swing.JFrame {
 
     private ServerSocket server;
     private final int PUERTOH = 1000;
-    private ArrayList<ClientGUI> clientes;
+    private ArrayList<ClientGUIold> clientes;
     
-    public ServerGUI() {
+    public ServerGUIold() {
         clientes = new ArrayList();
         initComponents();
         
@@ -120,7 +120,7 @@ public class ServerGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ClientGUI cliente = new ClientGUI(this);
+        ClientGUIold cliente = new ClientGUIold(this);
         clientes.add(cliente);
         
         actualizarLista();
@@ -131,12 +131,12 @@ public class ServerGUI extends javax.swing.JFrame {
         for(int i = 0; i<clientes.size(); i++) {
             usersName[i] = clientes.get(i).getNombre();
         }
-        for(ClientGUI client: clientes) {
+        for(ClientGUIold client: clientes) {
             client.updateUsersList(usersName);
         }
     }
     public void insertMessage(String message) {
-        for(ClientGUI cliente: clientes) {
+        for(ClientGUIold cliente: clientes) {
             cliente.mensajeria(message);
         }
         //System.out.println(message.substring(message.length()-9));

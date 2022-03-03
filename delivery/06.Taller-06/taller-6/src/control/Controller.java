@@ -1,13 +1,13 @@
 package control;
 
-import view.ServerGUI;
+import model.Server;
 
-/**
- *
- * @author Jean Carlos Santoya Cabrera
- */
 public class Controller {
-    public Controller() {
-        new ServerGUI();
+    
+    // reference
+    private Server mainServer;
+    
+    public Controller(Server mainServer) {
+        this.mainServer = mainServer;
     }
 }
