@@ -3,10 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Jean/Topic/sistemas/programacion-avanzada/repository/delivery/06.Taller-06/taller-6/src/control/Controller.java</file>
-            <file>file:/C:/Jean/Topic/sistemas/programacion-avanzada/repository/delivery/06.Taller-06/taller-6/src/control/server/ServerThread.java</file>
-            <file>file:/C:/Jean/Topic/sistemas/programacion-avanzada/repository/delivery/06.Taller-06/taller-6/src/control/server/Server.java</file>
-            <file>file:/C:/Jean/Topic/sistemas/programacion-avanzada/repository/delivery/06.Taller-06/taller-6/src/model/Client.java</file>
+            <file>file:/C:/Jean/Topic/sistemas/programacion-avanzada/repository/delivery/06.Taller-06/taller-6/src/control/client/Client.java</file>
         </group>
     </open-files>
 </project-private>
