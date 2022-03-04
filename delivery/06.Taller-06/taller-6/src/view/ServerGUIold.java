@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import javax.swing.*;
-import model.Server;
+import control.server.Server;
 
 /**
  *

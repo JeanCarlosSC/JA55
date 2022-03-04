@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.*;
 import javax.swing.DefaultListModel;
-import model.Client;
+import control.client.Client;
 
 /**
  *

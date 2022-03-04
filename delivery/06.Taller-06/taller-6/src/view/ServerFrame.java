@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
-import model.Server;
+import control.server.Server;
 
 public class ServerFrame extends JFrame{
     //constant
@@ -29,7 +29,7 @@ public class ServerFrame extends JFrame{
     }
     
     public void printMessage(String message) {
-        taChat.append(message + "\n");
+        taChat.append(message + ".\n"); // every message ends with dot
     }
     
     private void initComponents() {
@@ -54,7 +54,7 @@ public class ServerFrame extends JFrame{
         chatContainer.setLayout(null);
         chatContainer.setBounds(16, 64, WIDTH-48, HEIGHT-120);
         
-        JLabel lLog = new JLabel("Log:");
+        JLabel lLog = new JLabel("Log");
         lLog.setBounds(16, 16, 100, 16);
         chatContainer.add(lLog);
         

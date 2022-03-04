@@ -1,6 +1,6 @@
 package control;
 
-import model.Server;
+import control.server.Server;
 
 public class Controller {
     
@@ -10,6 +10,6 @@ public class Controller {
     public Controller() {
         // launch main server in default port
         mainServer = new Server(DEFAULT_PORT);
-        mainServer.run();
+        mainServer.init();
     }
 }
