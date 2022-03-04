@@ -1,13 +1,15 @@
 package control;
 
-import view.ServerGUI;
+import control.server.Server;
 
-/**
- *
- * @author Jean Carlos Santoya Cabrera
- */
 public class Controller {
+    
+    private final int DEFAULT_PORT = 5000;
+    private Server mainServer;
+    
     public Controller() {
-        new ServerGUI();
+        // launch main server in default port
+        mainServer = new Server(DEFAULT_PORT);
+        mainServer.init();
     }
 }

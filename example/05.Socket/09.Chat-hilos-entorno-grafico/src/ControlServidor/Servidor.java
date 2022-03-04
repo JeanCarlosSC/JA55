@@ -40,7 +40,6 @@ public class Servidor {
     }
 
     private boolean procesarSolicitud() {
-        System.out.println("Esperando por conexion del cliente...");
         try {
             while (true) {
                 //crea el socket
