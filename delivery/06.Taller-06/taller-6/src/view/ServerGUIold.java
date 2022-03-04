@@ -135,6 +135,7 @@ public class ServerGUIold extends javax.swing.JFrame {
             client.updateUsersList(usersName);
         }
     }
+    
     public void insertMessage(String message) {
         for(ClientGUIold cliente: clientes) {
             cliente.mensajeria(message);
